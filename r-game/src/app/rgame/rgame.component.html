@@ -1,3 +1,13 @@
-<div>
-  
+<div class="cell-rgame-container"> 
+  <div *ngFor="let c of cells; let i = index" class="cell-rgame" (click)="onCellClick(c)">      
+    {{c.cellIndex}}
+    <div style="position: relative;top:0px;left:0px">
+        <div style="position:absolute;top:30px;left:40px">
+            <div *ngIf="c.robo != '.' ">
+                {{c.robo}}
+            </div>
+        </div>
+    </div>
+  </div>
+  <div style="clear:both"></div>
 </div>
