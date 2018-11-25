@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class RgameComponent implements OnInit {
 
   cells = [];
-  robos = [".","1",".","1",".",".","2",".",".",".","3",".",".","3",".",".",".","1",".","1","."]
+  robos = ["0","2","0","2","0","0","1","0","0","0","0","0","0","0","0","0","0","0","0","1","0","0","1","1"]
 
   constructor() { }
 
@@ -16,20 +16,43 @@ export class RgameComponent implements OnInit {
     for(let i=0;i<this.robos.length;i++){
       this.cells.push({
         cellIndex:i,
-        robo:this.robos[i],
-        status:false
+        robo:parseInt(this.robos[i]),
+        status:false,
+        range:{
+          min:0,
+          max:0
+        }
       })
     }
   }
 
-  
-
-  onCellClick(cell) {
-     // check is the move will conflict or not.
-     console.log(cell);
-     // current cell value
-     // need to check with all the other cell
+  checkBoundary(c,i){
+    let sellCellRange = {
+        min:parseInt(i)-parseInt(c.robo),
+        max:parseInt(i)+parseInt(c.robo)
+    }  
     
+    for(var k=0; k <  this.cells.length; k++){      
+      if(this.cells[k].robo != '0' && k !==i ){;
+        let cellRange = { 
+          min: k - parseInt(this.cells[k].robo),
+          max: k + parseInt(this.cells[k].robo)
+        }
+        this.cells[k].range = {
+          min:cellRange.min,
+          max:cellRange.max
+        }
+
+        if(sellCellRange.min <= cellRange.min && sellCellRange.max >= cellRange.min){          
+          this.cells[i].status = true
+        }
+  
+        if(sellCellRange.min <= cellRange.max && sellCellRange.max >= cellRange.max){
+          this.cells[i].status = true
+        }
+      }
+    }
   }
 
+  
 }

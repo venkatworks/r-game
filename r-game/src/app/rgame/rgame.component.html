@@ -1,10 +1,22 @@
 <div class="cell-rgame-container"> 
-  <div *ngFor="let c of cells; let i = index" class="cell-rgame" (click)="onCellClick(c)">      
+  <div *ngFor="let c of cells; let i = index" class="cell-rgame">      
     {{c.cellIndex}}
     <div style="position: relative;top:0px;left:0px">
         <div style="position:absolute;top:0px;left:0px">
-            <div *ngIf="c.robo != '.' ">
+            <div *ngIf="c.robo != '0' ">
                 <div class="app-main-container">
+                    <div style="padding-left:15px">
+                        <input type="button" 
+                               id="checkRivalry" 
+                               name="checkRivalry" 
+                               value="Check Boundary" 
+                               (click)="checkBoundary(c,i)"/>
+                    </div>
+                    <div style="width:inherit;text-align: center">
+                        <div [ngClass]="{'status-active':c.status,'status-in-active':!c.status }">
+                            
+                        </div>
+                    </div>
                     <div class="robo-body">
                         <div class="robo-inner-container">
                             <div class="robo-face">

@@ -4,8 +4,8 @@
 }
 
 .cell-rgame{
-    width:150px;
-    height:150px;
+    width:175px;
+    height:175px;
     float:left;
     border:1px solid #000;
     background-image:  linear-gradient(to right, rgba(245, 13, 98, 0), #cdcbd6);;
@@ -122,4 +122,28 @@
 
 .clear-both {
     clear: both
+}
+
+.status-active{
+    color:red;
+    width:10px;
+    height:10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px;
+    position: absolute;
+    left:65px;
+    top:25px;
+    background: red;
+}
+
+.status-in-active{
+    color:green;
+    width:10px;
+    height:10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px;
+    position: absolute;
+    left:65px;
+    top:25px;
+    background: green;
 }
