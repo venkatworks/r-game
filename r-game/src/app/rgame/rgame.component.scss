@@ -4,9 +4,122 @@
 }
 
 .cell-rgame{
-    width:100px;
-    height:100px;
+    width:150px;
+    height:150px;
     float:left;
     border:1px solid #000;
     background-image:  linear-gradient(to right, rgba(245, 13, 98, 0), #cdcbd6);;
+}
+
+.app-main-container {
+    width: 100%;
+    height: 100%;
+}
+
+.robo-body {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top:0px;
+    left:0px;
+}
+
+.robo-inner-container{
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+
+.robo-face {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background: rgb(234, 210, 109);
+    border: 1px solid black;
+    left: 50px;
+    top: 20px;
+}
+
+.left-eye {
+    position: absolute;
+    left: 10px;
+    height: 3px;
+    top: 5px;
+    width: 3px;
+    background: rgb(109, 90, 128);
+    border: 1px solid black;
+}
+
+.right-eye {
+    position: absolute;
+    left: 25px;
+    height: 3px;
+    top: 5px;
+    width: 3px;
+    background: rgb(109, 90, 128);
+    border: 1px solid black;
+}
+
+.robo-waist {
+    position: absolute;
+    top: 43px;
+    left: 60px;
+    height: 20px;
+    width: 20px;
+    background: rgb(234, 210, 109);
+    border: 1px solid black;
+}
+
+.left-hand {
+    position: absolute;
+    left: -35px;
+    top: 5px;
+    background: rgb(123, 129, 130);
+    border: 1px solid black;
+    width: 30px;
+    height: 5px;
+}
+
+.right-hand {
+    position: absolute;
+    left: 23px;
+    top: 5px;
+    background: rgb(123, 129, 130);
+    border: 1px solid black;
+    width: 30px;
+    height: 5px;
+}
+
+.robo-legs {
+    position: absolute;
+    top: 67px;
+    left: 40px;
+    height: 10px;
+    width: 60px;
+    background: rgb(234, 210, 109);
+    border: 1px solid black;
+}
+
+.left-leg {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    height: 30px;
+    width: 10px;
+    background: rgb(234, 210, 109);
+    border: 1px solid black;
+}
+
+.right-leg {
+    position: absolute;
+    top: 12px;
+    left: 40px;
+    height: 30px;
+    width: 10px;
+    background: rgb(234, 210, 109);
+    border: 1px solid black;
+}
+
+.clear-both {
+    clear: both
 }
